@@ -52,14 +52,13 @@ function timecodeToSeconds(timecode) {
 }
 
 document.addEventListener('DOMContentLoaded', function (event) {
-  var NavApp = {};
+  let NavApp = {};
   NavApp.App = (function () {
-    var navButton = document.getElementById('menu-button');
-    var navMenu = document.getElementById('global-nav');
-    var navLinks = Array.from(document.querySelectorAll('#global-nav a'));
-    var navContainer = document.getElementById('nav-container');
-    var mbBackdrop = document.getElementById('mobilenav-backdrop');
-    var ESCAPE_CODE = 27;
+    let navMenu = document.getElementById('global-nav');
+    let navLinks = Array.from(document.querySelectorAll('#global-nav a'));
+    let navContainer = document.getElementById('nav-container');
+    let mbBackdrop = document.getElementById('mobilenav-backdrop');
+    let ESCAPE_CODE = 27;
 
     function initApp() {
       navButton.addEventListener('click', toggleMobileNav);
@@ -114,7 +113,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
     }
 
     function setUpBackToTopButton() {
-      var backToTopButton = document.querySelector('.back-to-top-button');
+      let backToTopButton = document.querySelector('.back-to-top-button');
       document.addEventListener('scroll', () => {
         if (window.scrollY > 1000) {
           backToTopButton.classList.add('active');
